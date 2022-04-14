@@ -1,0 +1,43 @@
+# Options for EditorConfig, a file format for specifying coding
+# styles.  Most editors and IDEs support EditorConfig, either out of
+# the box or via available plugins.  <https://editorconfig.org/>
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.yml]
+indent_size = 2
+
+# npm generates/edits these files with this indent_size.  Do not taunt
+# npm.
+[{package.json,package-lock.json}]
+indent_size = 2
+
+# composer generates and edits these files with this indent_size.  Do
+# not taunt composer.
+[{composer.json,composer.lock}]
+indent_size = 4
+
+# Yes, this file format requires tabs.
+[Makefile]
+indent_style = tab
+indent_size = 8
+
+# For compliance with PSR-12 (or formerly PSR-2).  We redundantly
+# specify indent_style = space here for good measure.
+[*.php]
+indent_size = 4
+indent_style = space
+
+[*.sh]
+indent_size = 4

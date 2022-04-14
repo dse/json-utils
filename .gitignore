@@ -1,0 +1,16 @@
+node_modules
+
+/.idea
+/.vscode
+/public
+/dist
+/tmp
+npm-debug.log
+
+# emacs/vim/etc. backup and temporary files
+*~
+\#*#
+.*#
+.*~
+
+typescript
